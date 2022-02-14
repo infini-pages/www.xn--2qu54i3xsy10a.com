@@ -9,6 +9,9 @@ html {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
 }
+img {
+  width: 100%;
+}
 .header {
   position: relative;
 }
@@ -72,6 +75,7 @@ html {
 .main .sec .p-s img {
   display: block;
   margin: 0 auto;
+  width: fit-content;
 }
 .main .sec .desc {
   font-size: 1rem;
@@ -116,7 +120,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   max-width: 1134px;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
 }
 .main .gateway .fetures .feture > dl dd {
@@ -125,6 +129,10 @@ html {
   color: #feffff;
   text-align: center;
   margin-top: 1rem;
+}
+
+.main .gateway .fetures .feture > dl dt img {
+  width: max-content;
 }
 .main .sec .btn-w {
   text-align: center;
@@ -218,15 +226,19 @@ html {
   max-width: 900px;
   width: 100%;
 }
+.main .comment {
+  padding:0 1rem;
+}
 .main .comment .sec-title h2 {
   color: #333333;
 }
 .main .comment .comment-list {
   display: flex;
   gap: 1em;
-  margin: 3rem 0;
-  width: 100%;
+  margin: 3rem auto;
   overflow-x: auto;
+  width: 100%;
+  max-width: 1400px;
 }
 .main .comment .comment-list .comment-item {
   width: 400px;
@@ -267,11 +279,12 @@ html {
 }
 .footer .logo {
   display: flex;
-  gap: 4rem;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 .footer .logo img {
-    width: 14rem;
-  }
+    width: 35%;
+}
 .footer .footer-wrapper h2 {
   font-size: 18px;
   font-weight: bold;
@@ -327,13 +340,19 @@ html {
 }
 @media (max-width: 768px) {
   .main .gateway .fetures {
-    gap: 3rem;
+    gap: 2rem;
+  }
+  .footer .logo img {
+    width: 40%;
+  }
+  .main .sec .p-s img {
+    width: 100%;
+  }
+  .main .sec .p-s img.usecase-img {
+    width: 57%;
   }
 }
 @media (max-width: 560px) {
-  .main .gateway .fetures {
-    gap: 5rem;
-  }
   .header .content .top .menus {
     margin-left: 0;
   }
